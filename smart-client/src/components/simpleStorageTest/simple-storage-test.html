@@ -1,0 +1,13 @@
+<div *ngIf="waiting">
+    <h2>Aguardando transação ser minerada...</h2>
+</div>
+<div *ngIf="!waiting">
+    <div>
+        <input type="text" [(ngModel)]="newValue"/>
+        <button (click)="setValue()">Setar valor</button>        
+    </div>
+    <div>
+        <button (click)="loadValue()">Ler Valor</button>
+        <input type="text" readonly="readonly" [ngModel]="value"/>    
+    </div>
+</div>
